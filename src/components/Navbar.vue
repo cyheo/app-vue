@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name: "NavbarComponent",
+    name: "NavBarComponent",
     props: {
         data: String
     }

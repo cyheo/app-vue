@@ -1,12 +1,12 @@
 <template>
-  <Navbar />
+  <NavBar />
   <MovieDisp :data="data" />
 </template>
 
 <script>
   import data from './assets/movies'
-  import MoviDisp from './components/MovieDisp.vue';
-  import Navbar from './components/Navbar.vue';
+  import MoviInfo from './components/MovieInfo.vue';
+  import NavBar from './components/NavBar.vue';
 
   export default {
     name: 'App',
@@ -17,8 +17,8 @@
       }
     },
     components : {
-      MovieDisp: MoviDisp,
-      Navbar: Navbar,
+      NavBar: NavBar,
+      MovieDisp: MoviInfo,
     }
 
   }
