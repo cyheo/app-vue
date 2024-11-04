@@ -1,26 +1,26 @@
-import MoviInfo from './components/MoviInfo.vue';
-
 <template>
-  <h1>영화정보</h1>
-  <div>
-    <h3 class="bg-yellow" :style="textRed">{{ title }}</h3>
-    <p>개봉: {{ year }}</p>
-    <p>장르: {{ category }}</p>
-  </div>
+  <Navbar />
+  <MovieDisp :data="data" />
 </template>
 
 <script>
+  import data from './assets/movies'
+  import MoviDisp from './components/MovieDisp.vue';
+  import Navbar from './components/Navbar.vue';
+
   export default {
     name: 'App',
     data() {
       return {
-        foods: ["김밥", "순대", "만두"],
-        title: "노량",
-        year: 2023,
-        category: "액션, 드라마",
-        textRed: "color: red"
+        isModal: false,
+        data: data,
       }
+    },
+    components : {
+      MovieDisp: MoviDisp,
+      Navbar: Navbar,
     }
+
   }
 </script>
 
