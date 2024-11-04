@@ -1,6 +1,6 @@
 <template>
   <NaviBar />
-  <MovieInfo :data="data" @increase="increase"/>
+  <MovieInfo :data="data" @increase="increase($event)"/>
 </template>
 
 <script>
@@ -17,8 +17,8 @@
       }
     },
     methods: {
-      increase() {
-        this.data[$event].count += 1;
+      increase(index) {
+        this.data[index].count += 1;
       }
     },
     components : {
