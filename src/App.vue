@@ -1,3 +1,5 @@
+import MoviInfo from './components/MoviInfo.vue';
+
 <template>
   <h1>영화정보</h1>
   <div>
