@@ -4,7 +4,7 @@
     <p>개봉: {{ movie.year }}</p>
     <p>장르: {{ movie.category }}</p>
     <div class="box">
-      <button @click="$emit(increase(index))">좋아요</button>
+      <button @click="$emit('increase', index)">좋아요</button>
       <p>{{ movie.count }}</p>
     </div>
   </div>
