@@ -16,6 +16,11 @@
         data: data,
       }
     },
+    methods: {
+      increase(index) {
+        data[index].count += 1;
+      }
+    },
     components : {
       NaviBar: NaviBar,
       MovieDisp: MoviInfo,
