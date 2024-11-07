@@ -1,10 +1,6 @@
 <template>
   <NaviBar />
-  <MovieInfo :data="data" @increase="increase($event)"/>
-  <p>Count: {{ counterStore.count }}</p>
-  <p>Double Count: {{ counterStore.doubleCount }}</p>
-  <button @click="counterStore.increment">Increment</button>
-  <button @click="counterStore.decrement">Decrement</button>
+  <MovieInfo :data="data" @increase="increase"/>
 </template>
 
 <script>
@@ -26,8 +22,8 @@
       }
     },
     methods: {
-      increase(index) {
-        this.data[index].count += 1;
+      increase() {
+        this.data[0].count += 1;
       }
     },
     components : {
