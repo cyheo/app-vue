@@ -22,8 +22,8 @@
       }
     },
     methods: {
-      increase() {
-        this.data[0].count += 1;
+      increase(index) {
+        this.data[index].count += 1;
       }
     },
     components : {
