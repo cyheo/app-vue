@@ -21,8 +21,6 @@
 
 <style>
   .box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    float: flex;
   }
 </style>
