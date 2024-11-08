@@ -1,14 +1,18 @@
 <template>
+  <NavBar />
+  <div>
+    <router-view></router-view>
+  </div>
   <PageOne />
 </template>
 
-<script>
-  import PageOne from '@/components/PageOne.vue';
-
-  export default {
-    name: 'App',
-    components: {
-      PageOne: PageOne
-    }
-  }
+<script setup>
+  import NavBar from '@/components/NavBar.vue'
 </script>
+
+<style scoped>
+* {
+  padding: 0px;
+  margin: 0px;
+}
+</style>
