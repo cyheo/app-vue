@@ -1,29 +1,14 @@
 <template>
-  <h1>Hello World</h1>
-  <Counter :count="appCount" :data="color"/>
-  <button @click="increaseCount()">Count++</button>
-  <p>{{ appCount }}</p>
+  <PageOne />
 </template>
 
 <script>
-  import Counter from '@/components/Counter.vue';
+  import PageOne from '@/components/PageOne.vue';
 
   export default {
     name: 'App',
-    data() {
-      return {
-        appCount: 0,
-        color: 'red',
-      }
-    },
-    methods: {
-      increaseCount() {
-        this.appCount++;
-      }
-    },
-    components : {
-      Counter: Counter
+    components: {
+      PageOne: PageOne
     }
-
   }
 </script>
