@@ -1,16 +1,13 @@
 <template>
-    <p>{{ count }}</p>
+    <p>Count: {{ count }}, Color: {{ data }}</p>
 </template>
 
 <script>
 export default {
     name: 'CounterComponent',
-    data() {
-        return {
-            count: 1
-        }
+    props: {
+        count: Number,
+        data: String,
     }
 }
-
-
 </script>

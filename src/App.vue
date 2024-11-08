@@ -1,6 +1,8 @@
 <template>
   <h1>Hello World</h1>
-  <Counter/>
+  <Counter :count="appCount" :data="color"/>
+  <button @click="increaseCount()">Count++</button>
+  <p>{{ appCount }}</p>
 </template>
 
 <script>
@@ -10,9 +12,14 @@
     name: 'App',
     data() {
       return {
+        appCount: 0,
+        color: 'red',
       }
     },
     methods: {
+      increaseCount() {
+        this.appCount++;
+      }
     },
     components : {
       Counter: Counter
