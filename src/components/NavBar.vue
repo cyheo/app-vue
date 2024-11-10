@@ -1,103 +1,24 @@
 <template>
-    <header>
-      <div id="brand"><router-link to="/">HOME</router-link></div>
-      <nav>
-        <ul>
-          <li><router-link to="/about">About</router-link></li>
-          <li><router-link to="/user">Users</router-link></li>
-        </ul>
-      </nav>
-      <div id="hamburger-icon" :class="{open: isOpened}" @click="toggleMenu">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-        <ul class="mobile-menu">
-          <li><router-link to="/about">About</router-link></li>
-          <li><router-link to="/user">Users</router-link></li>
-        </ul>
-      </div>
-    </header>
-    </template>
-    
-    <script>
-    export default {
-      name : "NavBarComponent",
-      data() {
-        return {
-          isOpened : false
-        }
-      },
-      methods: {
-        toggleMenu() {
-          this.isOpened = !this.isOpened
-        }
-      }
-    }
-    </script>
-    
-    <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      background-color: darkgray;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-      background-color: black;
-      padding: 0 10px;
-    }
-    header a {
-      text-decoration: none;
-    }
-    ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-    }
-    li a {
-      color: white;
-    }
-    #hamburger-icon {
-      display: none;
-      cursor: pointer;
-    }
-    #hamburger-icon div {
-      width: 35px;
-      height: 3px;
-      background-color: white;
-      margin: 6px 0;
-    }
-    .open .bar1 {
-      transform: rotate(-45deg) translate(-6px, 7px);
-    }
-    .open .bar2 {
-      opacity: 0;
-    }
-    .open .bar3 {
-      transform: rotate(45deg) translate(-6px, -7px);
-    }
-    #brand {
-      font-size: 32px;
-      font-weight: 700;
-    }
-    #brand a {
-      color: coral;
-    }
-    .mobile-menu {
-      display: none;
-    }
-    @media only screen and (max-width: 600px) {
-      header nav {
-        display: none;
-      }
-    
-      #hamburger-icon {
-        display: block;
-      }
-    }
-    </style>
+  <div id="app">
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/one">PageOne</router-link>
+      <router-link to="/two">PageTwo</router-link>
+    </nav>
+    <router-view />
+  </div>
+</template>
+
+<script>
+  export default {
+    name: "NavBar",
+  };
+</script>
+
+<style scoped>
+nav a {
+  margin: 0 10px;
+  text-decoration: noen;
+  color: #42b983;
+}
+</style>
