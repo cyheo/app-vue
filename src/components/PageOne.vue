@@ -1,8 +1,12 @@
 <template>
   <div>
     <h1>Welcome to the PageOne!!!</h1>
-    <button @click="counterStore.increaseCounter()">Count++</button>
+    <div>
+      <button class="button" @click="counterStore.increaseCounter()">Increase Count</button>
+      <button class="button" @click="counterStore.decreaseCounter()">Decrease Count</button>
+    </div>
     <p>{{ counterStore.count }}</p>
+    <p>{{ counterStore.countStatus }}</p>
   </div>
 </template>
 
@@ -17,3 +21,9 @@
     }
   }
 </script>
+
+<style scoped>
+  .button {
+    margin: 0 20px 0 0;
+  }
+</style>

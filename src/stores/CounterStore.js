@@ -14,7 +14,7 @@ export const useCounterStore = defineStore('counter', {
     },
     getters: {
         countStatus: (state) => {
-            if ( state.count === 0 ) {
+            if ( state.count == 0 ) {
                 return 'Out of stock';
             } else if ( state.count < 5 ) {
                 return 'Low Stock';
