@@ -1,31 +1,19 @@
 <template>
   <div>
     <h1>Welcome to the PageOne!!!</h1>
-    <Counter :count="appCount" :data="color"/>
-    <button @click="increaseCount()">Count++</button>
-    <p>{{ appCount }}</p>
+    <button @click="counterStore.increaseCounter()">Count++</button>
+    <p>{{ counterStore.count }}</p>
   </div>
 </template>
 
 <script>
-  import Counter from '@/components/Counter.vue';
+  import { useCounterStore } from '@/stores/CounterStore';
 
   export default {
     name: 'PageOneComponent',
-    data() {
-      return {
-        appCount: 0,
-        color: 'red',
-      }
-    },
-    methods: {
-      increaseCount() {
-        this.appCount++;
-      }
-    },
-    components : {
-      Counter: Counter
+    setup() {
+      const counterStore = useCounterStore();
+      return { counterStore };
     }
-
   }
 </script>
