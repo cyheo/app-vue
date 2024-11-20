@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <NaviBar />
   <MovieInfo :data="data" @increase="increase($event)"/>
   <p>Count: {{ counterStore.count }}</p>
@@ -33,14 +34,20 @@
     components : {
       NaviBar: NaviBar,
       MovieInfo: MoviInfo,
+=======
+  <div id="app">
+    <NavBar />
+  </div>
+</template>
+
+<script>
+  import NavBar from '@/components/NavBar.vue';
+
+  export default {
+    name: "App",
+    components: {
+      NavBar : NavBar
+>>>>>>> dev_1
     }
-
-  }
+  };
 </script>
-
-<style>
-  .bg-yellow {
-    background: gold;
-    padding: 10px;
-  }
-</style>
